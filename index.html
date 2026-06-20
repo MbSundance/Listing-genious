@@ -545,17 +545,400 @@
     .form-card { padding: 22px 18px; }
     .modal { padding: 22px 16px; }
   }
+
+  /* ===== LANDING PAGE ===== */
+  .landing { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+
+  .landing-hero {
+    text-align: center;
+    padding: 56px 0 48px;
+  }
+  .landing-hero .hero-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 16px;
+  }
+  .landing-hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.12;
+    color: var(--indigo);
+    margin-bottom: 20px;
+  }
+  .landing-hero h1 em { font-style: italic; color: var(--amber); }
+  .landing-hero p {
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.65;
+    max-width: 500px;
+    margin: 0 auto 32px;
+  }
+
+  .cta-primary {
+    display: inline-block;
+    background: var(--indigo);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 15px 36px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    text-decoration: none;
+  }
+  .cta-primary:hover { background: var(--indigo-light); }
+  .cta-primary:active { transform: scale(0.98); }
+
+  .cta-sub {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  /* FEATURES */
+  .features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  @media (min-width: 560px) { .features { grid-template-columns: repeat(3, 1fr); } }
+
+  .feature-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(61,53,128,0.04);
+  }
+  .feature-icon { font-size: 2rem; margin-bottom: 12px; }
+  .feature-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--indigo);
+    margin-bottom: 8px;
+  }
+  .feature-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.55; }
+
+  /* DEMO PREVIEW */
+  .demo-preview {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 48px;
+    box-shadow: 0 2px 12px rgba(61,53,128,0.06);
+  }
+  .demo-preview h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    color: var(--indigo);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .demo-item {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .demo-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .demo-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .demo-label .dot { width: 5px; height: 5px; background: var(--amber); border-radius: 50%; display: inline-block; }
+  .demo-value { font-size: 0.9rem; color: var(--text); line-height: 1.55; }
+  .demo-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .demo-tag {
+    background: var(--sage);
+    color: var(--indigo);
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 12px;
+    border: 1px solid #D4E0D4;
+  }
+
+  /* PRICING */
+  .pricing {
+    margin-bottom: 56px;
+  }
+  .pricing h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--indigo);
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 480px) { .pricing-grid { grid-template-columns: 1fr; } }
+
+  .pricing-card {
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 22px;
+    text-align: center;
+  }
+  .pricing-card.featured {
+    border-color: var(--indigo);
+    box-shadow: 0 4px 20px rgba(61,53,128,0.12);
+    position: relative;
+  }
+  .pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--amber);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .pricing-name {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--indigo);
+    margin-bottom: 8px;
+  }
+  .pricing-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .pricing-price span { font-size: 1rem; font-weight: 400; color: var(--muted); }
+  .pricing-desc { font-size: 0.82rem; color: var(--muted); margin-bottom: 20px; }
+  .pricing-features { list-style: none; margin-bottom: 24px; }
+  .pricing-features li {
+    font-size: 0.85rem;
+    color: var(--text);
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+  }
+  .pricing-features li::before { content: '✓'; color: var(--success); font-weight: 700; flex-shrink: 0; }
+  .pricing-features li.no::before { content: '✕'; color: #C0C0D0; }
+  .pricing-features li.no { color: var(--muted); }
+
+  .pricing-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    border: 1.5px solid var(--indigo);
+    text-decoration: none;
+    display: block;
+  }
+  .pricing-btn.outline { background: transparent; color: var(--indigo); }
+  .pricing-btn.outline:hover { background: var(--indigo); color: white; }
+  .pricing-btn.filled { background: var(--indigo); color: white; border-color: var(--indigo); }
+  .pricing-btn.filled:hover { background: var(--indigo-light); }
+
+  /* TESTIMONIAL */
+  .testimonial-section {
+    margin-bottom: 56px;
+    text-align: center;
+  }
+  .testimonial-section h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem;
+    color: var(--indigo);
+    margin-bottom: 24px;
+  }
+  .testimonial {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 14px;
+    text-align: left;
+  }
+  .testimonial p { font-size: 0.95rem; line-height: 1.6; color: var(--text); margin-bottom: 10px; font-style: italic; }
+  .testimonial-author { font-size: 0.82rem; font-weight: 600; color: var(--muted); }
+
+  /* FINAL CTA */
+  .final-cta {
+    text-align: center;
+    background: var(--indigo);
+    border-radius: var(--radius);
+    padding: 48px 28px;
+    margin-bottom: 48px;
+    color: white;
+  }
+  .final-cta h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .final-cta p { font-size: 1rem; opacity: 0.8; margin-bottom: 28px; line-height: 1.6; }
+  .cta-white {
+    display: inline-block;
+    background: white;
+    color: var(--indigo);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    text-decoration: none;
+  }
+  .cta-white:hover { opacity: 0.9; }
+
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">Listing<span>Genius</span></div>
+  <div class="logo" style="cursor:pointer" onclick="goToLanding()">Listing<span>Genius</span></div>
   <div class="badge">✦ AI-Powered</div>
 </nav>
 
+
+<!-- LANDING PAGE PANEL -->
+<div id="panel-landing">
+
+  <div class="landing">
+    <div class="landing-hero">
+      <div class="hero-eyebrow">For Etsy Sellers</div>
+      <h1>Write <em>perfect</em> Etsy listings<br>in seconds.</h1>
+      <p>Stop agonizing over titles, descriptions and tags. ListingGenius uses AI to generate SEO-optimized Etsy listings instantly — so you can focus on making, not writing.</p>
+      <button class="cta-primary" onclick="goToTool()">✦ Try it free</button>
+      <span class="cta-sub">3 free listings/day · No signup required</span>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>SEO-Optimized</h3>
+        <p>Titles and tags built around what buyers actually search for on Etsy.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Instant Results</h3>
+        <p>Paste your product details and get a full listing in under 10 seconds.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🗂</div>
+        <h3>Listing Vault</h3>
+        <p>Save all your generated listings in one place. Access them anytime.</p>
+      </div>
+    </div>
+
+    <!-- DEMO PREVIEW -->
+    <div class="demo-preview">
+      <h2>✦ See it in action</h2>
+      <div class="demo-item">
+        <div class="demo-label"><span class="dot"></span> Etsy Title</div>
+        <div class="demo-value">Hand-Poured Lavender Soy Candle | Natural Cotton Wick | Housewarming Gift | Self Care Candle | 8oz Amber Jar | 45 Hour Burn</div>
+      </div>
+      <div class="demo-item">
+        <div class="demo-label"><span class="dot"></span> Description (excerpt)</div>
+        <div class="demo-value">Fill your space with the calming scent of real lavender and eucalyptus. Hand-poured in small batches using 100% soy wax and a natural cotton wick, this candle burns clean for up to 45 hours...</div>
+      </div>
+      <div class="demo-item">
+        <div class="demo-label"><span class="dot"></span> SEO Tags</div>
+        <div class="demo-tags">
+          <span class="demo-tag">lavender candle</span>
+          <span class="demo-tag">soy candle gift</span>
+          <span class="demo-tag">housewarming candle</span>
+          <span class="demo-tag">natural candle</span>
+          <span class="demo-tag">self care gift</span>
+          <span class="demo-tag">hand poured candle</span>
+          <span class="demo-tag">aromatherapy candle</span>
+          <span class="demo-tag">amber jar candle</span>
+          <span class="demo-tag">clean burn candle</span>
+          <span class="demo-tag">eucalyptus candle</span>
+          <span class="demo-tag">cottage candle</span>
+          <span class="demo-tag">relaxation gift</span>
+          <span class="demo-tag">small batch candle</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING -->
+    <div class="pricing">
+      <h2>Simple pricing</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-name">Free</div>
+          <div class="pricing-price">€0 <span>/ forever</span></div>
+          <div class="pricing-desc">Perfect for getting started</div>
+          <ul class="pricing-features">
+            <li>3 listings per day</li>
+            <li>All 4 tone styles</li>
+            <li>13 SEO tags per listing</li>
+            <li class="no">Listing Vault</li>
+            <li class="no">Unlimited generations</li>
+          </ul>
+          <button class="pricing-btn outline" onclick="goToTool()">Start for free</button>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-name">Pro</div>
+          <div class="pricing-price">€9 <span>/ month</span></div>
+          <div class="pricing-desc">For serious Etsy sellers</div>
+          <ul class="pricing-features">
+            <li>Unlimited listings</li>
+            <li>All 4 tone styles</li>
+            <li>13 SEO tags per listing</li>
+            <li>Listing Vault</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="https://buy.stripe.com/6oU14g9MPfHfdYucUI1ck01" target="_blank" class="pricing-btn filled">Upgrade to Pro</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINAL CTA -->
+    <div class="final-cta">
+      <h2>Ready to write better listings?</h2>
+      <p>Join hundreds of Etsy sellers saving hours every week with ListingGenius.</p>
+      <button class="cta-white" onclick="goToTool()">✦ Try it free — no signup needed</button>
+    </div>
+
+  </div>
+</div>
+
 <!-- TABS -->
-<div class="tabs">
+<div class="tabs" id="main-tabs" style="display:none;">
   <button class="tab-btn active" onclick="switchTab('generate', this)">✦ Generate</button>
   <button class="tab-btn" id="vault-tab-btn" onclick="switchTab('vault', this)">
     🗂 My Vault <span class="vault-count" id="vault-count">0</span>
@@ -942,6 +1325,25 @@ Tags must be exactly 13 items, each 1-3 words max, highly searchable, varied (mi
       btn.classList.add('copied');
       setTimeout(() => { btn.textContent = 'Copy all'; btn.classList.remove('copied'); }, 2000);
     });
+  }
+
+
+  function goToTool() {
+    document.getElementById('panel-landing').style.display = 'none';
+    document.getElementById('main-tabs').style.display = 'flex';
+    const tabs = document.querySelectorAll('.tab-btn');
+    tabs.forEach(b => b.classList.remove('active'));
+    tabs[0].classList.add('active');
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel-generate').classList.add('active');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  function goToLanding() {
+    document.getElementById('panel-landing').style.display = 'block';
+    document.getElementById('main-tabs').style.display = 'none';
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    window.scrollTo({top: 0, behavior: 'smooth'});
   }
 
   // Init vault count on load
